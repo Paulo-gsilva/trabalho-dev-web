@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
-import './custom.css';
+import React, { Component } from "react";
+import Home from "./components/Home/Home";
+import { NavMenu } from "./components/NavMenu";
+import "./custom.css";
 
-export default class App extends Component {
-  static displayName = App.name;
-
-  render() {
-    return (
-      <h1>aidshaushdas</h1>
-    );
-  }
+function App() {
+  return (
+    <>
+      <NavMenu />
+      <Home />
+    </>
+  );
 }
+
+export default App;
