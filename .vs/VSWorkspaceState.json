@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\freeacademy",
+    "\\freeacademy\\Controllers"
   ],
+  "SelectedNode": "\\freeacademy\\Controllers",
   "PreviewInSolutionExplorer": false
 }

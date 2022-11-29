@@ -1,4 +1,3 @@
-using freeacademy.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,9 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<Context>
-    (options => options.UseSqlServer("Data Source=localhost, 1433\\SQLEXPRESS;Initial Catalog=FreeAcademy;User ID=admin;Password=12345678"));
 
 var app = builder.Build();
 
