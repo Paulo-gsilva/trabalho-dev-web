@@ -8,6 +8,7 @@ import {
   NavLink,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import freeAcademyLogo from "../img/freeacademylogo.png";
 import "./NavMenu.css";
 
 export class NavMenu extends Component {
@@ -37,7 +38,7 @@ export class NavMenu extends Component {
           light
         >
           <NavbarBrand tag={Link} to="/">
-            Free Academy
+            <img className="freeacademylogo" src={freeAcademyLogo}></img>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse
@@ -47,17 +48,32 @@ export class NavMenu extends Component {
           >
             <ul className="navbar-nav flex-grow">
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/">
+                <NavLink
+                  tag={Link}
+                  className="text-dark"
+                  style={{ fontSize: 20 }}
+                  to="/"
+                >
                   Home
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/cursos">
+                <NavLink
+                  tag={Link}
+                  className="text-dark"
+                  style={{ fontSize: 20 }}
+                  to="/cursos"
+                >
                   Meus Cursos
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/perfil">
+                <NavLink
+                  tag={Link}
+                  className="text-dark"
+                  style={{ fontSize: 20 }}
+                  to="/perfil"
+                >
                   Perfil
                 </NavLink>
               </NavItem>

@@ -1,9 +1,9 @@
 import React from "react";
-import "../news.css";
+import "../rating.css";
 
-function News({ title, teacher, img, alt }) {
+function Rating({ title, teacher, img, alt }) {
   return (
-    <article className="news-article">
+    <article className="rating-article">
       <img className="article-img" src={img} alt={alt}></img>
       <div className="article-text">
         <h4>{title}</h4>
@@ -13,4 +13,4 @@ function News({ title, teacher, img, alt }) {
   );
 }
 
-export default News;
+export default Rating;

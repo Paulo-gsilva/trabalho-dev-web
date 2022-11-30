@@ -1,19 +1,19 @@
-.news-container {
+.rating-container {
   max-width: 100%;
   margin: 4rem 0;
   position: relative;
 }
 
-.news-container p {
+.rating-container p {
   margin-top: -0.5rem;
 }
 
-.news-map {
+.rating-map {
   cursor: grab;
   overflow: hidden;
 }
 
-.news-article {
+.rating-article {
   min-width: 280px;
   height: 200px;
   padding: 0.5rem;
@@ -22,21 +22,21 @@
   justify-content: space-evenly;
 }
 
-.news-article .article-img {
+.rating-article .article-img {
   padding-top: 0.5rem;
   width: 100%;
   height: 18vh;
 }
 
-.news-article .article-text {
+.rating-article .article-text {
   cursor: pointer;
 }
 
-.news-article .article-text:hover {
+.rating-article .article-text:hover {
   background: rgba(128, 128, 128, 0.098);
 }
 
-.news-items {
+.rating-items {
   display: flex;
   gap: 15px;
 }

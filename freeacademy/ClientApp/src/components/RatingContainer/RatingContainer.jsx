@@ -1,74 +1,76 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import "./news.css";
-import News from "./News/News";
+import Rating from "./Rating/Rating";
+import "./rating.css";
 import image from "../../img/bible-g38657752f_1920.jpg";
 
-function NewsContainer() {
-  const carousel = useRef();
+function RatingContainer() {
+  const ratingCarousel = useRef();
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+    setWidth(
+      ratingCarousel.current?.scrollWidth - ratingCarousel.current?.offsetWidth
+    );
   }, []);
 
   return (
-    <div className="news-container">
-      <h3>Novidades</h3>
-      <p>Cursos novos com alta qualidade!</p>
-      <div className="news-container-grid">
+    <div className="rating-container">
+      <h3>Mais Vistos</h3>
+      <p>Cursos populares entre os estudantes!</p>
+      <div className="rating-container-grid">
         <motion.div
-          ref={carousel}
-          className="news-map"
+          ref={ratingCarousel}
+          className="rating-map"
           whileTap={{ cursor: "grabbing" }}
         >
           <motion.div
-            className="news-items"
+            className="rating-items"
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
           >
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
                 alt="imagem bíblia"
               />
             </motion.div>
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
                 alt="imagem bíblia"
               />
             </motion.div>
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
                 alt="imagem bíblia"
               />
             </motion.div>
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
                 alt="imagem bíblia"
               />
             </motion.div>
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
                 alt="imagem bíblia"
               />
             </motion.div>
-            <motion.div className="news">
-              <News
+            <motion.div className="rating-item">
+              <Rating
                 title="React"
                 teacher="Paulo"
                 img={image}
@@ -82,4 +84,4 @@ function NewsContainer() {
   );
 }
 
-export default NewsContainer;
+export default RatingContainer;
