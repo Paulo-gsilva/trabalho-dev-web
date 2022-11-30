@@ -1,10 +1,10 @@
 .profile-section {
-  height: 50vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem 0;
+  margin: 4rem 0rem 0;
   position: relative;
 }
 
@@ -34,6 +34,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  width: 19rem;
+}
+
+.profile-content .profile-data div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .profile-content .profile-data div input {
@@ -44,13 +53,18 @@
 }
 
 .profile-data .teacher-button {
-  align-self: end;
+  position: relative;
 }
 
 .profile-data .teacher-button button {
+  font-weight: bold;
+  text-transform: uppercase;
   border: none;
   width: 8rem;
   height: 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
   background: rgba(128, 128, 128, 0.607);
 }
 
@@ -65,9 +79,14 @@
 @media (max-width: 600px) {
   .profile-content {
     flex-direction: column;
+    margin-top: 2rem;
   }
 
   .profile-content .profile-data {
-    margin-top: 4rem;
+    margin-top: 2rem;
+  }
+
+  .profile-content img {
+    margin-right: 0rem;
   }
 }

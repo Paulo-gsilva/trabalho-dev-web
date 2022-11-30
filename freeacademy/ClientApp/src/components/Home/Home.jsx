@@ -3,6 +3,7 @@ import NewsContainer from "../NewsContainer/NewsContainer";
 import RatingContainer from "../RatingContainer/RatingContainer";
 import { NavMenu } from "../NavMenu";
 import "./home.css";
+import Footer from "../Footer/Footer";
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
         <NewsContainer />
         <RatingContainer />
       </section>
+      <Footer style="footer-section" />
     </>
   );
 }

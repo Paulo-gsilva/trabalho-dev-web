@@ -20,3 +20,7 @@ html {
 .freeacademylogo {
   height: 4rem;
 }
+
+li {
+  margin-left: 2rem;
+}
