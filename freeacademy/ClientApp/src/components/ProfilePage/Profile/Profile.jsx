@@ -16,10 +16,10 @@ function Profile({
   return (
     <section className="profile-section">
       <h2 className="profile-title">
-        Olá, {name}, {gender == "M" ? "Bem-Vindo" : "Bem-Vinda"} ao seu perfil.
+        Olá, {name}, {gender === "M" ? "Bem-Vindo" : "Bem-Vinda"} ao seu perfil.
       </h2>
       <div className="profile-content">
-        <img src={gender == "M" ? manprofile : womanprofile} alt={alt}></img>
+        <img src={gender === "M" ? manprofile : womanprofile} alt={alt}></img>
         <div className="profile-data">
           <div>
             <label>Nome: </label>

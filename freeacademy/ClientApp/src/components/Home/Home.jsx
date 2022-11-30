@@ -21,7 +21,10 @@ function Home() {
           </div>
         </div>
         <NewsContainer />
-        <RatingContainer />
+        <RatingContainer
+          title="Mais Vistos"
+          description="Cursos populares entre os estudantes!s"
+        />
       </section>
       <Footer style="footer-section" />
     </>

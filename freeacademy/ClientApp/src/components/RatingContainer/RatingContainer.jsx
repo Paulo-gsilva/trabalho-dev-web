@@ -4,7 +4,7 @@ import Rating from "./Rating/Rating";
 import "./rating.css";
 import image from "../../img/bible-g38657752f_1920.jpg";
 
-function RatingContainer() {
+function RatingContainer({ title, description }) {
   const ratingCarousel = useRef();
   const [width, setWidth] = useState(0);
 
@@ -16,8 +16,8 @@ function RatingContainer() {
 
   return (
     <div className="rating-container">
-      <h3>Mais Vistos</h3>
-      <p>Cursos populares entre os estudantes!</p>
+      <h3>{title}</h3>
+      <p>{description}</p>
       <div className="rating-container-grid">
         <motion.div
           ref={ratingCarousel}
@@ -29,30 +29,6 @@ function RatingContainer() {
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
           >
-            <motion.div className="rating-item">
-              <Rating
-                title="React"
-                teacher="Paulo"
-                img={image}
-                alt="imagem bíblia"
-              />
-            </motion.div>
-            <motion.div className="rating-item">
-              <Rating
-                title="React"
-                teacher="Paulo"
-                img={image}
-                alt="imagem bíblia"
-              />
-            </motion.div>
-            <motion.div className="rating-item">
-              <Rating
-                title="React"
-                teacher="Paulo"
-                img={image}
-                alt="imagem bíblia"
-              />
-            </motion.div>
             <motion.div className="rating-item">
               <Rating
                 title="React"
