@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 
 namespace freeacademy.Controllers
 {
+    //retirar esse comnenta´rio depois
     [Route("UserStudents")]
     public class StudentController : Controller
     {
