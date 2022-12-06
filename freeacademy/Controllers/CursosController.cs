@@ -10,62 +10,24 @@ using System.Security.Cryptography;
 
 namespace freeacademy.Controllers
 {
-    [Route("UserStudents")]
-    public class StudentController : Controller
+    [Route("Cursos")]
+    public class CursosController : Controller
     {
         private readonly DataContext _appDbDataContext;
 
-        public StudentController(DataContext appDbContext)
+        public CursosController(DataContext appDbContext)
         {
             _appDbDataContext = appDbContext;
         }
 
-        [HttpPost]
-        [Route("Create")]
-        public async Task<ActionResult<userStudent>> NewuserStudent(userStudent userStudent)
-        {
-
-            try
-            {
-                userStudent.PASSWORD = Encrypt(userStudent.PASSWORD);
-                _appDbDataContext.Add(userStudent);
-
-                await _appDbDataContext.SaveChangesAsync();
-
-                return Ok(new { succes = true, data = "Usuário criado com sucesso" });
-            }
-            catch(Exception ex)
-            {
-                throw new Exception(ex.Message, ex.InnerException);
-            }
-
-        }
 
         [HttpGet]
-        [Route("LoginUserStudent")]
-        public async Task<ActionResult<userStudent>> GetUserToLogin(string userName, string password)
+        [Route("GetCursos")]
+
+        public async Task<IEnumerable<Cursos>> GetCursos()
         {
-            password = Encrypt(password);
-            userStudent user = new userStudent();
-            userStudent loginUser = new userStudent();
-
-            user.NAME = userName;
-            user.PASSWORD = password;
-            loginUser = await _appDbDataContext.userStudent.FirstOrDefaultAsync(u => u.NAME == user.NAME);
-
-            if (loginUser.PASSWORD == user.PASSWORD)
-            {
-                return Ok(new { success = true, data = "Usuário logado com sucesso" });
-            }
-            else
-            {
-                return Ok(new { success = false, data = "Login ou senha incorretos" });
-            }
+            return await _appDbDataContext.Cursos.ToListAsync();
         }
-
-
-
-
         public static string Encrypt(string Password)
         {
             try
