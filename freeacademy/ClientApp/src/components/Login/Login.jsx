@@ -13,7 +13,7 @@ function Login() {
           <input placeholder="Senha" type="password" />
           <div className="form-button">
             <button type="submit" className="loginButton">
-              Login
+              <Link to="/"> Login </Link>
             </button>
             <button className="signButton">
               <Link to="/cadastrar"> Cadastrar</Link>

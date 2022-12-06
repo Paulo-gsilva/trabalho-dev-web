@@ -23,7 +23,7 @@ function Home() {
         <NewsContainer />
         <RatingContainer
           title="Mais Vistos"
-          description="Cursos populares entre os estudantes!s"
+          description="Cursos populares entre os estudantes!"
         />
       </section>
       <Footer style="footer-section" />

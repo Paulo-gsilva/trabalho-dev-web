@@ -54,7 +54,7 @@
   width: 8rem;
 }
 
-.login-section .login-content form .signButton a {
+.login-section .login-content form button a {
   color: black;
   text-decoration: none;
 }

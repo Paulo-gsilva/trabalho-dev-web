@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Rating from "./Rating/Rating";
 import "./rating.css";
-import image from "../../img/bible-g38657752f_1920.jpg";
+const image = "https://docs.google.com/uc?id=1LQbvDZcJxCFqKKMXlAVw_tRs1xUaWMKf";
 
 function RatingContainer({ title, description }) {
   const ratingCarousel = useRef();
